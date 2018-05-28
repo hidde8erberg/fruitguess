@@ -1,0 +1,17 @@
+group 'com.hidde8erberg'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'com.hidde8erberg.deeplearning.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.8.4'
+}
