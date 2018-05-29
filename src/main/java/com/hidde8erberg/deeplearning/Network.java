@@ -1,6 +1,5 @@
 package com.hidde8erberg.deeplearning;
 
-import java.util.List;
 import java.util.Random;
 import static java.lang.Math.exp;
 
@@ -69,9 +68,8 @@ public class Network {
 
     }
 
-    // TODO: create cost function
-    double cost(double[] input, double correct) {
-        return forward_prop(input) - correct;
+    private double cost(double[] input, double correct) {
+        return Math.pow(forward_prop(input) - correct, 2);
     }
 
     double tanh(double n) {
