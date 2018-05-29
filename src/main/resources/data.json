@@ -1,34 +1,32 @@
-{
-  "data": [
-    {
-      "r": 255,
-      "g": 98,
-      "b": 0,
-      "correct": false
-    },
-    {
-      "r": 255,
-      "g": 98,
-      "b": 0,
-      "correct": true
-    },
-    {
-      "r": 255,
-      "g": 98,
-      "b": 0,
-      "correct": false
-    },
-    {
-      "r": 255,
-      "g": 98,
-      "b": 0,
-      "correct": false
-    },
-    {
-      "r": 255,
-      "g": 98,
-      "b": 0,
-      "correct": false
-    }
-  ]
-}
+[
+  {
+    "r": 255,
+    "g": 98,
+    "b": 0,
+    "correct": false
+  },
+  {
+    "r": 255,
+    "g": 98,
+    "b": 0,
+    "correct": true
+  },
+  {
+    "r": 255,
+    "g": 98,
+    "b": 0,
+    "correct": false
+  },
+  {
+    "r": 255,
+    "g": 98,
+    "b": 0,
+    "correct": false
+  },
+  {
+    "r": 255,
+    "g": 98,
+    "b": 0,
+    "correct": false
+  }
+]

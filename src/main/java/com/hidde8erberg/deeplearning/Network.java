@@ -1,5 +1,6 @@
 package com.hidde8erberg.deeplearning;
 
+import java.util.List;
 import java.util.Random;
 import static java.lang.Math.exp;
 
@@ -67,8 +68,9 @@ public class Network {
 
     }
 
-    double cost(double[] input, double goal) {
-        return forward_prop(input) - goal;
+    double cost(double[] input, boolean correct) {
+        if (correct == true) return forward_prop(input) - 0;
+        else return 0;
     }
 
     double tanh(double n) {
@@ -79,20 +81,21 @@ public class Network {
         return 1/(1+exp(-n));
     }
 
-    Network() {
+    Network(double[][] input) {
         init();
         double[] test_in = {219/255,61/255,0/255};
 
+        System.out.println(input[1][2]);
         /*for(int i = 0; i < weights.length; i++){
             for(int j = 0; j < weights[i].length; j++){
                 System.out.println(weights[i][j]);
             }
-        }*/
+        }
         while (true) {
             double test = forward_prop(test_in);
-            System.out.println(test);
+            //System.out.println(test);
             init();
-        }
+        }*/
     }
 
 }
