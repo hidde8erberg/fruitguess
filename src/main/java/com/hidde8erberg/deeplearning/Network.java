@@ -68,9 +68,8 @@ public class Network {
 
     }
 
-    double cost(double[] input, boolean correct) {
-        if (correct == true) return forward_prop(input) - 0;
-        else return 0;
+    double cost(double[] input, double correct) {
+        return forward_prop(input) - correct;
     }
 
     double tanh(double n) {
