@@ -64,10 +64,12 @@ public class Network {
         return tanh(output);
     }
 
+    // TODO: create backpropagation function
     public void back_prop() {
 
     }
 
+    // TODO: create cost function
     double cost(double[] input, double correct) {
         return forward_prop(input) - correct;
     }
