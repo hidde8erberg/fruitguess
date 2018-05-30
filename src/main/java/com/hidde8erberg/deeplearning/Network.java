@@ -1,6 +1,8 @@
 package com.hidde8erberg.deeplearning;
 
 import java.util.Random;
+
+import static java.lang.Math.cos;
 import static java.lang.Math.exp;
 
 public class Network {
@@ -46,8 +48,8 @@ public class Network {
     }
 
     public double forward_prop(double[] input) {
-        if(input.length != 3){
-            throw new IllegalArgumentException("input does not have a size of 3");
+        if(input.length != 4){
+            throw new IllegalArgumentException("input not the apropriate size");
         }
 
         double[] hiddenvalues = new double[9];
@@ -68,8 +70,8 @@ public class Network {
 
     }
 
-    private double cost(double[] input, double correct) {
-        return Math.pow(forward_prop(input) - correct, 2);
+    private double cost(double[] input) {
+        return Math.pow(forward_prop(input) - input[3], 2);
     }
 
     double tanh(double n) {
@@ -84,16 +86,21 @@ public class Network {
         init();
         double[] test_in = {219/255,61/255,0/255};
 
-        System.out.println(input[1][2]);
+        //System.out.println(cost(input[1]));
+
+        double small = 1;
+        while (true) {
+            if (cost(input[1]) < small) {
+                small = cost(input[1]);
+                System.out.println(small);
+            }
+            init();
+        }
+
         /*for(int i = 0; i < weights.length; i++){
             for(int j = 0; j < weights[i].length; j++){
                 System.out.println(weights[i][j]);
             }
-        }
-        while (true) {
-            double test = forward_prop(test_in);
-            //System.out.println(test);
-            init();
         }*/
     }
 
