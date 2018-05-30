@@ -2,7 +2,6 @@ package com.hidde8erberg.deeplearning;
 
 import java.util.Random;
 
-import static java.lang.Math.cos;
 import static java.lang.Math.exp;
 
 public class Network {
