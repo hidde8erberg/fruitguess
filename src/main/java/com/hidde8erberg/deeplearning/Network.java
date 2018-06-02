@@ -77,7 +77,16 @@ public class Network {
         return Math.tanh(n);
     }
 
-    double act(double n) {
+    double relu(double n) {
+        if (n < 0) return 0;
+        else return n;
+    }
+    // TODO: create softmax function and add to forward propagation
+    double softmax(double n) {
+        return 0;
+    }
+
+    double sigmoid(double n) {
         return 1/(1+exp(-n));
     }
 
