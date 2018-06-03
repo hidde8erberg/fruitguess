@@ -55,7 +55,7 @@ public class Network {
         double output = bias_o;
 
         for(int i = 0; i < hiddenvalues.length; i++){
-            hiddenvalues[i] = tanh((input[0] * weights[i][0]) + (input[1] * weights[i][1]) + (input[2] * weights[i][2]) + bias[i]);
+            hiddenvalues[i] = relu((input[0] * weights[i][0]) + (input[1] * weights[i][1]) + (input[2] * weights[i][2]) + bias[i]);
         }
 
         for(int i = 0; i < hiddenvalues.length; i++) {
@@ -81,6 +81,7 @@ public class Network {
         if (n < 0) return 0;
         else return n;
     }
+
     // TODO: create softmax function and add to forward propagation
     double softmax(double n) {
         return 0;
@@ -94,16 +95,16 @@ public class Network {
         init();
         double[] test_in = {219/255,61/255,0/255};
 
-        //System.out.println(cost(input[1]));
+        System.out.println(forward_prop(input[1]));
 
-        double small = 1;
+        /*double small = 1;
         while (true) {
             if (cost(input[1]) < small) {
                 small = cost(input[1]);
                 System.out.println(small);
             }
             init();
-        }
+        }*/
 
         /*for(int i = 0; i < weights.length; i++){
             for(int j = 0; j < weights[i].length; j++){
